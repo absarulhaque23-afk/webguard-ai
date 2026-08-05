@@ -24,8 +24,8 @@ export default function AdminScansPage() {
       try {
         const response = await adminService.getAllScans(page, 15);
         if (response.success) {
-          setScans(response.data.scans);
-          setTotal(response.data.total);
+          setScans(response.data);
+          setTotal(response.pagination.total);
         }
       } catch (error) {
         console.error(error);
@@ -37,13 +37,13 @@ export default function AdminScansPage() {
   }, [page]);
 
   const columns = [
-    { 
-      header: 'URL', 
+    {
+      header: 'URL',
       accessorKey: 'url',
       cell: (item: IScanResult) => <div className="max-w-[200px] truncate" title={item.url}>{item.url}</div>
     },
-    { 
-      header: 'User ID', 
+    {
+      header: 'User ID',
       accessorKey: 'userId',
       cell: (item: IScanResult) => <div className="text-xs text-gray-500 font-mono">{item.userId.substring(0, 8)}...</div>
     },
@@ -81,7 +81,7 @@ export default function AdminScansPage() {
           <main className="flex-1 p-6 lg:p-8 overflow-y-auto">
             <div className="max-w-6xl mx-auto space-y-6">
               <h1 className="text-3xl font-bold text-white mb-2">System Wide Scans</h1>
-              
+
               {loading && scans.length === 0 ? (
                 <div className="flex justify-center py-20"><Spinner /></div>
               ) : (
