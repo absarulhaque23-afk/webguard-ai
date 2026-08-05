@@ -1,0 +1,157 @@
+{
+  "modelName": "WebGuard AI URL Classifier",
+  "version": "1.0.0",
+  "algorithm": "LogisticRegression",
+  "accuracy": 1.0,
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1Score": 1.0,
+  "rocAuc": 1.0,
+  "confusionMatrix": [
+    [
+      750,
+      0,
+      0
+    ],
+    [
+      0,
+      375,
+      0
+    ],
+    [
+      0,
+      0,
+      375
+    ]
+  ],
+  "classLabels": [
+    "BENIGN",
+    "SUSPICIOUS",
+    "MALICIOUS"
+  ],
+  "trainingDataset": "synthetic_phishing_10k",
+  "datasetSize": 10000,
+  "trainSize": 6999,
+  "testSize": 1500,
+  "features": [
+    "url_length",
+    "hostname_length",
+    "path_length",
+    "num_dots",
+    "num_hyphens",
+    "num_underscores",
+    "num_digits",
+    "num_special_chars",
+    "num_subdomains",
+    "has_ip_address",
+    "has_at_symbol",
+    "has_suspicious_keywords",
+    "is_shortened_url",
+    "is_https",
+    "query_param_count",
+    "has_fragment",
+    "num_encoded_chars",
+    "suspicious_tld",
+    "hostname_entropy",
+    "path_entropy",
+    "digit_ratio",
+    "special_char_ratio",
+    "path_depth",
+    "domain_token_count",
+    "longest_subdomain_length"
+  ],
+  "featureCount": 25,
+  "hyperparameters": {
+    "C": 10,
+    "solver": "lbfgs"
+  },
+  "trainedAt": "2026-07-26T19:36:40.893518",
+  "allModelResults": {
+    "LogisticRegression": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "roc_auc": 1.0,
+      "best_params": {
+        "C": 10,
+        "solver": "lbfgs"
+      },
+      "confusion_matrix": [
+        [
+          750,
+          0,
+          0
+        ],
+        [
+          0,
+          375,
+          0
+        ],
+        [
+          0,
+          0,
+          375
+        ]
+      ]
+    },
+    "RandomForest": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "roc_auc": 1.0,
+      "best_params": {
+        "max_depth": 10,
+        "min_samples_split": 2,
+        "n_estimators": 100
+      },
+      "confusion_matrix": [
+        [
+          750,
+          0,
+          0
+        ],
+        [
+          0,
+          375,
+          0
+        ],
+        [
+          0,
+          0,
+          375
+        ]
+      ]
+    },
+    "XGBoost": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "roc_auc": 1.0,
+      "best_params": {
+        "learning_rate": 0.1,
+        "max_depth": 6,
+        "n_estimators": 200
+      },
+      "confusion_matrix": [
+        [
+          750,
+          0,
+          0
+        ],
+        [
+          0,
+          375,
+          0
+        ],
+        [
+          0,
+          0,
+          375
+        ]
+      ]
+    }
+  }
+}

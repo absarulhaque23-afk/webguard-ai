@@ -1,0 +1,58 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Next.js
+.next/
+out/
+
+# Python
+venv/
+.venv/
+*.so
+.pytest_cache/
+
+# Datasets (regeneratable)
+ml-service/datasets/*.csv
+
+# Logs
+*.log
+logs/
+
+# Coverage
+coverage/
+.nyc_output/
+htmlcov/
+
+# Docker
+.docker/
+
+# TypeScript
+*.tsbuildinfo
+
+# Report/Paper files (not needed in repo)
+WebGuard_AI_Major_Project_Report.html
+WebGuard_AI_Presentation.html
+WebGuard_AI_IEEE_Research_Paper.html
